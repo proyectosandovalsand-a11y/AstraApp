@@ -1,4 +1,4 @@
-# 👑 ASTRA PERFUMERIA — E-Commerce & Catálogo de Alta Perfumería
+#  ASTRA PERFUMERIA — E-Commerce & Catálogo de Alta Perfumería
 
 Catálogo interactivo de alta gama para **ASTRA PERFUMERIA**, inspirado en las mejores tiendas de lujo de Colombia como **Perfumería EAU**, **Blind** y **Loto del Sur**.
 
