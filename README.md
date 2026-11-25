@@ -2,6 +2,8 @@
 
 Catálogo interactivo de alta gama para **ASTRA PERFUMERIA**, inspirado en las mejores tiendas de lujo de Colombia como **Perfumería EAU**, **Blind** y **Loto del Sur**.
 
+<img width="1352" height="628" alt="image" src="https://github.com/user-attachments/assets/a7a358eb-8e76-4e2d-a5a0-aeda2f359e2d" />
+
 ---
 
 ## 🌟 Novedades y Mejoras Implementadas
