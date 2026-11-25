@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASTRA PERFUMERIA | Alta Perfumería Árabe & Nicho en Colombia</title>
+  <meta name="description" content="Catálogo exclusivo de perfumería nicho, árabe y diseñador en Colombia. Decants 100% originales desde 5ml y frascos sellados. WhatsApp: 3138852832.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Google Fonts: Cormorant Garamond, Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FAF9F6',
+              white: '#FFFFFF',
+              charcoal: '#1A1A1A',
+              gold: '#C5A059',
+              goldDark: '#9F792B',
+              goldLight: '#F5EEDF',
+              border: '#EAE6DE',
+              whatsapp: '#25D366'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            editorial: ['"Cormorant Garamond"', 'Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#FAF9F6] text-[#1A1A1A] antialiased selection:bg-[#C5A059]/25 selection:text-black">
+
+  <!-- 1. TOP ANNOUNCEMENT PROMO BAR -->
+  <div class="bg-[#141414] text-white text-[11px] sm:text-xs py-2.5 px-4 border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+        <span class="font-medium tracking-wide">
+          🚚 <strong>ENVÍO GRATIS</strong> en Colombia en pedidos superiores a <strong>$250.000 COP</strong>
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-neutral-300">
+        <a href="https://wa.me/573138852832" target="_blank" class="hover:text-white transition-colors flex items-center gap-1.5 font-bold text-[#25D366]">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.578 1.764.88 2.791.88 3.182 0 5.768-2.587 5.768-5.766.001-3.187-2.575-5.766-5.768-5.766zm9.969 5.766c0 5.405-4.394 9.8-9.8 9.8-1.734 0-3.355-.453-4.771-1.246l-5.429 1.422 1.447-5.295c-.879-1.477-1.378-3.186-1.378-4.981 0-5.406 4.394-9.8 9.8-9.8 5.405 0 9.8 4.394 9.8 9.8z"/>
+          </svg>
+          <span class="hidden sm:inline">WhatsApp:</span> 313 885 2832
+        </a>
+        <span class="hidden md:inline text-neutral-500">|</span>
+        <span class="hidden md:inline text-neutral-400 font-semibold">PESOS COP ($)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. STICKY HEADER -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-[#EAE6DE] shadow-xs transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 shrink-0 group">
+        <img 
+          src="assets/logo.jpg" 
+          alt="ASTRA Perfumería" 
+          class="h-12 w-auto object-contain transition-transform group-hover:scale-105"
+        />
+        <div class="hidden sm:flex flex-col border-l border-[#EAE6DE] pl-3">
+          <span class="text-[9px] font-extrabold uppercase tracking-[0.25em] text-[#9F792B]">Alta Perfumería</span>
+          <span class="text-[10px] text-neutral-500 font-medium">Boutique Colombia</span>
+        </div>
+      </a>
+
+      <!-- Desktop Live Search with Popover Suggestions -->
+      <div class="hidden md:flex flex-1 max-w-lg mx-4 relative">
+        <div class="relative w-full">
+          <input 
+            type="text" 
+            id="search-input"
+            autocomplete="off"
+            placeholder="Buscar por perfume, casa (ej: Lattafa, Creed, Delina) o nota..." 
+            class="w-full pl-10 pr-10 py-2.5 text-xs bg-white border border-[#DDD8CB] rounded-full focus:outline-hidden focus:border-[#C5A059] focus:ring-2 focus:ring-[#C5A059]/15 text-neutral-800 placeholder-neutral-400 font-medium"
+          />
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-neutral-400">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+          <span class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-[10px] text-neutral-400 font-mono">
+            /
+          </span>
+        </div>
+
+        <!-- Live Suggestions Popover -->
+        <div id="search-suggestions-box" class="hidden absolute top-full left-0 right-0 mt-1.5 bg-white rounded-2xl shadow-xl border border-[#EAE6DE] overflow-hidden z-50"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        
+        <!-- Advisor Button Desktop -->
+        <button 
+          onclick="openWhatsAppAdvisory()"
+          class="hidden lg:flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-neutral-800 bg-[#FAF7F0] hover:bg-[#F3EFE4] border border-[#DDD8CB] rounded-full transition-all"
+        >
+          <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+          Asesoría Olfativa
+        </button>
+
+        <!-- Wishlist Button -->
+        <button 
+          onclick="openWishlist()"
+          class="relative p-2.5 text-neutral-700 hover:text-red-500 rounded-full hover:bg-neutral-100 transition-colors"
+          title="Ver favoritos"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+          <span class="wishlist-count-badge hidden absolute top-1 right-1 w-4 h-4 rounded-full bg-[#C5A059] text-white text-[9px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Shopping Cart Drawer Trigger -->
+        <button 
+          onclick="openCart()"
+          class="relative flex items-center gap-2 px-4 py-2.5 bg-[#1A1A1A] hover:bg-neutral-800 text-white rounded-full shadow-xs transition-all"
+          title="Ver selección de pedido"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="text-xs font-bold hidden sm:inline">Bolsa</span>
+          <span class="cart-count-badge hidden w-4 h-4 rounded-full bg-[#C5A059] text-white text-[10px] font-extrabold flex items-center justify-center">0</span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Search Bar -->
+    <div class="md:hidden px-4 pb-3">
+      <div class="relative w-full">
+        <input 
+          type="text" 
+          id="search-input-mobile"
+          placeholder="Buscar perfume, marca, notas..." 
+          class="w-full pl-9 pr-4 py-2 text-xs bg-white border border-[#DDD8CB] rounded-full focus:outline-hidden focus:border-[#C5A059] text-neutral-800 placeholder-neutral-400"
+        />
+        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-neutral-400">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. HERO BANNER EDITORIAL (ESTILO PERFUMERIA EAU / HAUTE PARFUMERIE) -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#FFFFFF] via-[#F9F7F2] to-[#FAF9F6] border-b border-[#EAE6DE] py-14 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Text Left -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-5">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white rounded-full border border-[#DFBF7A]/60 text-[#8C6C2D] text-xs font-extrabold tracking-widest uppercase shadow-2xs">
+            <span>👑</span> PERFUMERÍA ÁRABE, NICHO & DECANTS EN COLOMBIA
+          </div>
+
+          <h1 class="font-serif-title text-4xl sm:text-5xl lg:text-6xl font-normal text-neutral-900 leading-[1.15]">
+            El Poder de un Aroma <br>
+            <span class="italic font-editorial text-4xl sm:text-6xl text-[#9F792B]">que jamás se olvida.</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-neutral-600 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            Descubre las fragancias más virales del mundo, joyas de la perfumería árabe y obras maestras de nicho. 
+            Prueba en tu piel con nuestros <strong>Decants de 5ml y 10ml</strong> o adquiere la <strong>botella sellada original</strong> con despacho asegurado a toda Colombia.
+          </p>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
+            <a 
+              href="#catalogo" 
+              class="w-full sm:w-auto px-7 py-3.5 bg-[#1A1A1A] hover:bg-neutral-800 text-white text-xs font-extrabold uppercase tracking-wider rounded-full shadow-md hover:shadow-lg transition-all text-center"
+            >
+              Explorar Catálogo
+            </a>
+            <button 
+              onclick="setCategoryTab('decants'); document.getElementById('catalogo').scrollIntoView();"
+              class="w-full sm:w-auto px-7 py-3.5 bg-white hover:bg-[#FAF7F0] text-neutral-900 border border-[#DDD8CB] text-xs font-extrabold uppercase tracking-wider rounded-full shadow-2xs transition-all text-center"
+            >
+              Ver Decants desde $32.000 COP
+            </button>
+            <a 
+              href="https://wa.me/573138852832" 
+              target="_blank"
+              class="w-full sm:w-auto px-6 py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-extrabold uppercase tracking-wider rounded-full shadow-md transition-all flex items-center justify-center gap-2"
+            >
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.578 1.764.88 2.791.88 3.182 0 5.768-2.587 5.768-5.766.001-3.187-2.575-5.766-5.768-5.766zm9.969 5.766c0 5.405-4.394 9.8-9.8 9.8-1.734 0-3.355-.453-4.771-1.246l-5.429 1.422 1.447-5.295c-.879-1.477-1.378-3.186-1.378-4.981 0-5.406 4.394-9.8 9.8-9.8 5.405 0 9.8 4.394 9.8 9.8z"/></svg>
+              Chat WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Hero Cards Right -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm">
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=85" 
+                alt="Perfumería Nicho ASTRA" 
+                class="w-full h-80 object-cover"
+              />
+              <div class="p-5 bg-white">
+                <span class="text-[10px] font-bold text-[#A58039] uppercase tracking-wider block">Top Selección Semanal</span>
+                <h3 class="font-serif-title text-xl font-bold text-neutral-900 mt-0.5">Baccarat Rouge & Perfumes Árabes</h3>
+                <div class="flex items-center justify-between mt-3 pt-3 border-t border-[#F0ECE4]">
+                  <span class="text-xs text-neutral-500">Decants desde <strong class="text-neutral-900 font-extrabold">$ 38.000 COP</strong></span>
+                  <button onclick="setCategoryTab('bestseller'); document.getElementById('catalogo').scrollIntoView();" class="text-xs font-bold text-[#C5A059] hover:underline">
+                    Ver más vendidos →
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Badge Overlay -->
+            <div class="absolute -bottom-4 -left-4 bg-[#1A1A1A] text-white px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-2.5 border border-neutral-700">
+              <span class="text-lg">⭐</span>
+              <div>
+                <p class="text-xs font-bold">100% Originales</p>
+                <p class="text-[10px] text-neutral-400">Garantía total en cada frasco</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TRUST VALUE PROPOSITIONS BAR -->
+  <section class="bg-white border-b border-[#EAE6DE] py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center sm:text-left">
+        
+        <div class="flex items-center gap-3 p-2">
+          <div class="w-10 h-10 rounded-xl bg-[#FAF6EC] flex items-center justify-center text-xl shrink-0 text-[#C5A059]">
+            🚚
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-neutral-900">Envío Gratis</h4>
+            <p class="text-[11px] text-neutral-500">En compras mayores a $250.000</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 p-2">
+          <div class="w-10 h-10 rounded-xl bg-[#FAF6EC] flex items-center justify-center text-xl shrink-0 text-[#C5A059]">
+            🛡️
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-neutral-900">100% Original</h4>
+            <p class="text-[11px] text-neutral-500">Garantía de autenticidad total</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 p-2">
+          <div class="w-10 h-10 rounded-xl bg-[#FAF6EC] flex items-center justify-center text-xl shrink-0 text-[#C5A059]">
+            💳
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-neutral-900">Contraentrega</h4>
+            <p class="text-[11px] text-neutral-500">Nequi, Bancolombia o Efectivo</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 p-2">
+          <div class="w-10 h-10 rounded-xl bg-[#FAF6EC] flex items-center justify-center text-xl shrink-0 text-[#25D366]">
+            📱
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-neutral-900">WhatsApp Oficial</h4>
+            <a href="https://wa.me/573138852832" target="_blank" class="text-[11px] text-neutral-700 font-bold hover:underline">
+              313 885 2832
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CATEGORY QUICK TABS (INSTAGRAM / EAU STYLE STORIES) -->
+  <section class="bg-[#FAF9F6] py-6 border-b border-[#EAE6DE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+        <button 
+          onclick="setCategoryTab('todos')"
+          data-category="todos"
+          class="category-pill active shrink-0 px-4 py-2 bg-white rounded-full text-xs font-bold border border-[#DDD8CB] text-neutral-800 shadow-2xs"
+        >
+          ✨ Todas las Fragancias
+        </button>
+        <button 
+          onclick="setCategoryTab('arabe')"
+          data-category="arabe"
+          class="category-pill shrink-0 px-4 py-2 bg-white rounded-full text-xs font-bold border border-[#DDD8CB] text-neutral-800 shadow-2xs flex items-center gap-1.5"
+        >
+          <span>🐪</span> Perfumería Árabe
+        </button>
+        <button 
+          onclick="setCategoryTab('nicho')"
+          data-category="nicho"
+          class="category-pill shrink-0 px-4 py-2 bg-white rounded-full text-xs font-bold border border-[#DDD8CB] text-neutral-800 shadow-2xs flex items-center gap-1.5"
+        >
+          <span>👑</span> Nicho Exclusivo
+        </button>
+        <button 
+          onclick="setCategoryTab('decants')"
+          data-category="decants"
+          class="category-pill shrink-0 px-4 py-2 bg-white rounded-full text-xs font-bold border border-[#DDD8CB] text-neutral-800 shadow-2xs flex items-center gap-1.5"
+        >
+          <span>🧪</span> Decants (5ml / 10ml)
+        </button>
+        <button 
+          onclick="setCategoryTab('dama')"
+          data-category="dama"
+          class="category-pill shrink-0 px-4 py-2 bg-white rounded-full text-xs font-bold border border-[#DDD8CB] text-neutral-800 shadow-2xs flex items-center gap-1.5"
+        >
+          <span>👠</span> Para Ella
+        </button>
+        <button 
+          onclick="setCategoryTab('caballero')"
+          data-category="caballero"
+          class="category-pill shrink-0 px-4 py-2 bg-white rounded-full text-xs font-bold border border-[#DDD8CB] text-neutral-800 shadow-2xs flex items-center gap-1.5"
+        >
+          <span>🎩</span> Para Él
+        </button>
+        <button 
+          onclick="setCategoryTab('bestseller')"
+          data-category="bestseller"
+          class="category-pill shrink-0 px-4 py-2 bg-white rounded-full text-xs font-bold border border-[#DDD8CB] text-neutral-800 shadow-2xs flex items-center gap-1.5"
+        >
+          <span>🔥</span> Más Vendidos
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. MAIN CATALOG SECTION -->
+  <main id="catalogo" class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10">
+    
+    <!-- Controls Header -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#EAE6DE]">
+      <div>
+        <h2 class="font-serif-title text-2xl sm:text-3xl font-bold text-neutral-900">
+          Catálogo Oficial ASTRA
+        </h2>
+        <p id="product-count-display" class="text-xs text-neutral-500 mt-1 font-medium">
+          Cargando perfumes...
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <!-- Mobile Filter Button -->
+        <button 
+          onclick="openMobileFilters()"
+          class="lg:hidden flex items-center gap-2 px-4 py-2.5 bg-white border border-[#DDD8CB] rounded-xl text-xs font-bold text-neutral-800 shadow-2xs"
+        >
+          <svg class="w-4 h-4 text-[#C5A059]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+          Filtros Avanzados
+        </button>
+
+        <!-- Sorting -->
+        <div class="flex items-center gap-2">
+          <label for="sort-select" class="text-xs text-neutral-500 font-semibold hidden sm:inline">Ordenar:</label>
+          <select 
+            id="sort-select"
+            class="px-3.5 py-2.5 bg-white border border-[#DDD8CB] rounded-xl text-xs font-bold text-neutral-800 focus:outline-hidden focus:border-[#C5A059]"
+          >
+            <option value="bestseller">🔥 Más Populares</option>
+            <option value="price-asc">Precio: Menor a Mayor</option>
+            <option value="price-desc">Precio: Mayor a Menor</option>
+            <option value="name-asc">Nombre: A - Z</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Filters Chips -->
+    <div id="active-filters-chips" class="py-4 hidden"></div>
+
+    <!-- Catalog Content: Left Filter Sidebar + Products Grid -->
+    <div class="mt-6 flex flex-col lg:flex-row gap-8 items-start">
+      
+      <!-- DESKTOP FILTERS SIDEBAR -->
+      <aside class="hidden lg:block w-72 shrink-0 space-y-6 bg-white p-6 rounded-3xl border border-[#EAE6DE] shadow-xs">
+        
+        <div class="flex items-center justify-between pb-3 border-b border-[#F0ECE4]">
+          <h3 class="text-xs font-extrabold uppercase tracking-widest text-neutral-900 flex items-center gap-2">
+            <span>⚙️</span> Filtros de Colección
+          </h3>
+          <button onclick="resetFilters()" class="text-[11px] font-bold text-neutral-500 hover:text-neutral-900">
+            Restablecer
+          </button>
+        </div>
+
+        <!-- Price Range Slider -->
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <label class="text-xs font-bold text-neutral-900 uppercase tracking-wider">Precio Máximo</label>
+            <span id="price-range-display" class="text-xs font-extrabold text-[#9F792B]">$ 2.000.000 COP</span>
+          </div>
+          <input 
+            type="range" 
+            id="price-range-slider" 
+            min="30000" 
+            max="2000000" 
+            step="20000" 
+            value="2000000" 
+            class="w-full h-1.5 bg-[#EAE6DE] rounded-lg cursor-pointer"
+          />
+        </div>
+
+        <!-- Gender -->
+        <div class="pt-4 border-t border-[#F0ECE4]">
+          <label class="block text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2.5">Género</label>
+          <div class="flex flex-wrap gap-1.5">
+            <button data-filter-type="gender" data-filter-value="Todos" onclick="setFilter('gender', 'Todos')" class="px-3 py-1.5 rounded-lg text-xs font-bold border bg-neutral-900 text-white border-neutral-900">Todos</button>
+            <button data-filter-type="gender" data-filter-value="Unisex" onclick="setFilter('gender', 'Unisex')" class="px-3 py-1.5 rounded-lg text-xs font-bold border bg-white text-neutral-700 border-neutral-200">Unisex</button>
+            <button data-filter-type="gender" data-filter-value="Masculino" onclick="setFilter('gender', 'Masculino')" class="px-3 py-1.5 rounded-lg text-xs font-bold border bg-white text-neutral-700 border-neutral-200">Caballero</button>
+            <button data-filter-type="gender" data-filter-value="Femenino" onclick="setFilter('gender', 'Femenino')" class="px-3 py-1.5 rounded-lg text-xs font-bold border bg-white text-neutral-700 border-neutral-200">Dama</button>
+          </div>
+        </div>
+
+        <!-- Olfactory Family -->
+        <div class="pt-4 border-t border-[#F0ECE4]">
+          <label class="block text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2.5">Familia Olfativa</label>
+          <div class="space-y-1 text-xs">
+            <button data-filter-type="family" data-filter-value="Todas" onclick="setFilter('family', 'Todas')" class="w-full text-left px-3 py-2 rounded-lg hover:bg-[#FAF7F0] font-semibold">✨ Todas las familias</button>
+            <button data-filter-type="family" data-filter-value="Oriental/Especiada" onclick="setFilter('family', 'Oriental/Especiada')" class="w-full text-left px-3 py-2 rounded-lg hover:bg-[#FAF7F0] font-semibold">🪵 Oriental / Especiada</button>
+            <button data-filter-type="family" data-filter-value="Gourmand" onclick="setFilter('family', 'Gourmand')" class="w-full text-left px-3 py-2 rounded-lg hover:bg-[#FAF7F0] font-semibold">🍫 Gourmand & Licores</button>
+            <button data-filter-type="family" data-filter-value="Amaderada" onclick="setFilter('family', 'Amaderada')" class="w-full text-left px-3 py-2 rounded-lg hover:bg-[#FAF7F0] font-semibold">🌲 Amaderada</button>
+            <button data-filter-type="family" data-filter-value="Floral" onclick="setFilter('family', 'Floral')" class="w-full text-left px-3 py-2 rounded-lg hover:bg-[#FAF7F0] font-semibold">🌸 Floral</button>
+            <button data-filter-type="family" data-filter-value="Cítrica" onclick="setFilter('family', 'Cítrica')" class="w-full text-left px-3 py-2 rounded-lg hover:bg-[#FAF7F0] font-semibold">🍋 Cítrica & Fresca</button>
+          </div>
+        </div>
+
+        <!-- Concentration -->
+        <div class="pt-4 border-t border-[#F0ECE4]">
+          <label class="block text-xs font-bold text-neutral-900 uppercase tracking-wider mb-2.5">Concentración</label>
+          <div class="flex flex-wrap gap-1.5">
+            <button data-filter-type="concentration" data-filter-value="Todas" onclick="setFilter('concentration', 'Todas')" class="px-2.5 py-1 rounded-md text-xs font-bold border bg-neutral-900 text-white border-neutral-900">Todas</button>
+            <button data-filter-type="concentration" data-filter-value="Parfum" onclick="setFilter('concentration', 'Parfum')" class="px-2.5 py-1 rounded-md text-xs font-bold border bg-white text-neutral-700 border-neutral-200">Parfum / Extrait</button>
+            <button data-filter-type="concentration" data-filter-value="Eau de Parfum" onclick="setFilter('concentration', 'Eau de Parfum')" class="px-2.5 py-1 rounded-md text-xs font-bold border bg-white text-neutral-700 border-neutral-200">EDP</button>
+            <button data-filter-type="concentration" data-filter-value="Eau de Toilette" onclick="setFilter('concentration', 'Eau de Toilette')" class="px-2.5 py-1 rounded-md text-xs font-bold border bg-white text-neutral-700 border-neutral-200">EDT</button>
+          </div>
+        </div>
+
+        <!-- Help Card -->
+        <div class="p-4 rounded-2xl bg-[#FAF6EC] border border-[#E8DCBF] text-center space-y-2">
+          <p class="text-xs font-bold text-[#8C6C2D]">¿No sabes cuál elegir?</p>
+          <p class="text-[11px] text-neutral-600">Te asesoramos para que encuentres tu perfume ideal.</p>
+          <button onclick="openWhatsAppAdvisory()" class="w-full py-2 bg-[#25D366] text-white text-xs font-bold rounded-xl shadow-xs hover:bg-[#1EBE5D] transition-all">
+            Hablar con un asesor
+          </button>
+        </div>
+
+      </aside>
+
+      <!-- PRODUCTS GRID -->
+      <div class="flex-1 w-full">
+        <div id="perfumes-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated dynamically by app.js -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden text-center py-16 px-4 bg-white rounded-3xl border border-[#EAE6DE] shadow-xs">
+          <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-[#FAF6EC] flex items-center justify-center text-2xl text-[#C5A059]">
+            🔍
+          </div>
+          <h3 class="font-serif-title text-xl font-bold text-neutral-900">No encontramos fragancias con estos filtros</h3>
+          <p class="text-xs text-neutral-500 mt-2 max-w-sm mx-auto">
+            Prueba ajustando el precio máximo o quitando los filtros de categoría.
+          </p>
+          <button onclick="resetFilters()" class="mt-5 px-6 py-2.5 bg-[#1A1A1A] text-white rounded-full text-xs font-bold uppercase tracking-wider hover:bg-neutral-800">
+            Ver todas las fragancias
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 7. REVIEWS & TESTIMONIALS SECTION (SOCIAL PROOF COLOMBIA) -->
+  <section class="bg-white py-14 border-t border-[#EAE6DE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#A58039]">Testimonios Verificados</span>
+        <h2 class="font-serif-title text-2xl sm:text-3xl font-bold text-neutral-900 mt-1">
+          Lo que dicen nuestros clientes en Colombia
+        </h2>
+        <p class="text-xs text-neutral-500 mt-2">
+          Clientes reales que confían en ASTRA para sus fragancias personales y decants.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="p-6 rounded-2xl bg-[#FAF9F6] border border-[#EAE6DE] space-y-3">
+          <div class="flex items-center gap-1 text-amber-500 text-sm">★★★★★</div>
+          <p class="text-xs text-neutral-700 leading-relaxed italic">
+            "Pedí el decant de Baccarat Rouge 540 y Khamrah de Lattafa. Llegó en 2 días a Medellín súper bien empacado. La fijación es impresionante, 100% original. ¡Recomendadísimos!"
+          </p>
+          <div class="pt-2 border-t border-[#EAE6DE] flex items-center justify-between text-xs">
+            <span class="font-bold text-neutral-900">Alejandro Restrepo</span>
+            <span class="text-neutral-400">Medellín • Compra verificada</span>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-6 rounded-2xl bg-[#FAF9F6] border border-[#EAE6DE] space-y-3">
+          <div class="flex items-center gap-1 text-amber-500 text-sm">★★★★★</div>
+          <p class="text-xs text-neutral-700 leading-relaxed italic">
+            "Delina Exclusif es una locura. Poder comprar el decant de 10ml antes de gastar más de un millón en la botella me pareció la mejor opción. La atención por WhatsApp fue impecable."
+          </p>
+          <div class="pt-2 border-t border-[#EAE6DE] flex items-center justify-between text-xs">
+            <span class="font-bold text-neutral-900">Valeria Gómez</span>
+            <span class="text-neutral-400">Bogotá • Compra verificada</span>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-6 rounded-2xl bg-[#FAF9F6] border border-[#EAE6DE] space-y-3">
+          <div class="flex items-center gap-1 text-amber-500 text-sm">★★★★★</div>
+          <p class="text-xs text-neutral-700 leading-relaxed italic">
+            "Compré Sauvage Elixir y Club de Nuit. Despacho rápido y pago contraentrega sin problemas. El atomizador del decant es de vidrio grueso y no se riega nada."
+          </p>
+          <div class="pt-2 border-t border-[#EAE6DE] flex items-center justify-between text-xs">
+            <span class="font-bold text-neutral-900">Camilo Torres</span>
+            <span class="text-neutral-400">Cali • Compra verificada</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ ACCORDION -->
+  <section class="bg-[#FAF9F6] py-14 border-t border-[#EAE6DE]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#A58039]">Preguntas Frecuentes</span>
+        <h2 class="font-serif-title text-2xl sm:text-3xl font-bold text-neutral-900 mt-1">
+          Todo lo que necesitas saber
+        </h2>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <details class="group bg-white p-4 rounded-2xl border border-[#EAE6DE] cursor-pointer">
+          <summary class="font-bold text-neutral-900 flex justify-between items-center list-none">
+            <span>¿Qué es exactamente un Decant y por qué es original?</span>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-neutral-600 mt-2.5 leading-relaxed">
+            Un decant es una muestra fraccionada directamente de la botella original oficial hacia un atomizador de vidrio sellado de 5ml o 10ml. El líquido es exactamente el mismo del frasco de tienda, sin diluir ni alterar.
+          </p>
+        </details>
+
+        <details class="group bg-white p-4 rounded-2xl border border-[#EAE6DE] cursor-pointer">
+          <summary class="font-bold text-neutral-900 flex justify-between items-center list-none">
+            <span>¿Cuánto tardan los envíos en Colombia?</span>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-neutral-600 mt-2.5 leading-relaxed">
+            Despachamos el mismo día hábil por transportadoras certificadas (Servientrega, Coordinadora o Interrapidísimo). Los tiempos son de 1 a 2 días hábiles en ciudades principales (Bogotá, Medellín, Cali, Barranquilla, Cúcuta) y de 2 a 4 días en el resto del país.
+          </p>
+        </details>
+
+        <details class="group bg-white p-4 rounded-2xl border border-[#EAE6DE] cursor-pointer">
+          <summary class="font-bold text-neutral-900 flex justify-between items-center list-none">
+            <span>¿Qué métodos de pago reciben?</span>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-neutral-600 mt-2.5 leading-relaxed">
+            Aceptamos transferencias Bancolombia, Nequi, Daviplata, link de pago PSE para tarjetas de crédito/débito y servicio de pago contraentrega en las principales ciudades de Colombia.
+          </p>
+        </details>
+
+        <details class="group bg-white p-4 rounded-2xl border border-[#EAE6DE] cursor-pointer">
+          <summary class="font-bold text-neutral-900 flex justify-between items-center list-none">
+            <span>¿Cómo funciona el pedido directo por WhatsApp?</span>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <p class="text-neutral-600 mt-2.5 leading-relaxed">
+            Al presionar "Pedir al WhatsApp" o "Finalizar Pedido" desde tu bolsa de compras, se abrirá un chat directo con nuestro número oficial (+57 313 885 2832) con el desglose exacto de los perfumes, tamaños y valores para confirmar el despacho en segundos.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. PRODUCT DETAIL MODAL -->
+  <div id="product-modal" class="hidden fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div class="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity" onclick="closeProductModal()"></div>
+    <div class="relative w-full max-w-4xl bg-white rounded-3xl shadow-2xl border border-[#EAE6DE] overflow-hidden z-10">
+      <div id="product-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- 10. SHOPPING CART DRAWER (BOLSA DE COMPRAS) -->
+  <div id="cart-drawer" class="hidden fixed inset-0 z-50 overflow-hidden">
+    <div class="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity" onclick="closeCart()"></div>
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="w-screen max-w-md bg-white border-l border-[#EAE6DE] shadow-2xl flex flex-col justify-between">
+        
+        <!-- Cart Header -->
+        <div class="p-6 border-b border-[#EAE6DE] flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="text-xl">🛍️</span>
+            <h3 class="font-serif-title text-xl font-bold text-neutral-900">Tu Selección ASTRA</h3>
+          </div>
+          <button onclick="closeCart()" class="text-neutral-400 hover:text-neutral-700 p-1">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+        <!-- Free Shipping Meter -->
+        <div class="bg-[#FAF7F0] px-6 py-3 border-b border-[#EAE6DE]">
+          <p id="free-shipping-text" class="text-[11px] text-neutral-700 font-medium text-center">
+            Calculando envío...
+          </p>
+          <div class="w-full bg-[#E5E0D5] h-1.5 rounded-full overflow-hidden mt-1.5">
+            <div id="free-shipping-meter" class="free-shipping-progress bg-[#25D366] h-full rounded-full" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Items Container -->
+        <div class="flex-1 overflow-y-auto p-6">
+          <div id="cart-items-container" class="space-y-1"></div>
+          <div id="cart-empty-message" class="text-center py-16">
+            <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-[#FAF6EC] flex items-center justify-center text-3xl">🛍️</div>
+            <p class="font-serif-title text-lg font-bold text-neutral-800">Tu bolsa está vacía</p>
+            <p class="text-xs text-neutral-500 mt-1 max-w-xs mx-auto">Explora el catálogo y agrega tus fragancias favoritas.</p>
+            <button onclick="closeCart()" class="mt-4 px-6 py-2 bg-[#1A1A1A] text-white text-xs font-bold rounded-full">
+              Ver Fragancias
+            </button>
+          </div>
+        </div>
+
+        <!-- Checkout Form & WhatsApp Finalize -->
+        <div id="cart-checkout-section" class="p-6 bg-[#FAF9F6] border-t border-[#EAE6DE] space-y-3.5">
+          <div class="space-y-1 text-xs">
+            <div class="flex justify-between text-neutral-600">
+              <span>Subtotal:</span>
+              <span id="cart-subtotal" class="font-bold text-neutral-900">$ 0 COP</span>
+            </div>
+            <div class="flex justify-between text-base font-extrabold text-neutral-900 pt-2 border-t border-[#EAE6DE]">
+              <span>Total Estimado:</span>
+              <span id="cart-total" class="font-serif-title font-extrabold text-lg text-[#9F792B]">$ 0 COP</span>
+            </div>
+          </div>
+
+          <!-- Customer details -->
+          <div class="space-y-2 pt-1 text-xs">
+            <input type="text" id="checkout-name" placeholder="Tu nombre completo" class="w-full px-3 py-2 bg-white border border-[#D5D0C2] rounded-xl focus:outline-hidden focus:border-[#C5A059]" />
+            <input type="text" id="checkout-city" placeholder="Ciudad y dirección de entrega" class="w-full px-3 py-2 bg-white border border-[#D5D0C2] rounded-xl focus:outline-hidden focus:border-[#C5A059]" />
+            <select id="checkout-payment" class="w-full px-3 py-2 bg-white border border-[#D5D0C2] rounded-xl focus:outline-hidden focus:border-[#C5A059] text-neutral-700 font-medium">
+              <option value="Transferencia Bancolombia / Nequi">Pago por Bancolombia / Nequi / Daviplata</option>
+              <option value="Pago Contraentrega">Pago Contraentrega (ciudades principales)</option>
+              <option value="Tarjeta de Crédito / PSE">Link de Pago PSE / Tarjetas</option>
+            </select>
+          </div>
+
+          <button 
+            onclick="checkoutWhatsApp()"
+            class="w-full py-3.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white rounded-xl text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition-all"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.578 1.764.88 2.791.88 3.182 0 5.768-2.587 5.768-5.766.001-3.187-2.575-5.766-5.768-5.766zm9.969 5.766c0 5.405-4.394 9.8-9.8 9.8-1.734 0-3.355-.453-4.771-1.246l-5.429 1.422 1.447-5.295c-.879-1.477-1.378-3.186-1.378-4.981 0-5.406 4.394-9.8 9.8-9.8 5.405 0 9.8 4.394 9.8 9.8z"/></svg>
+            Finalizar Pedido por WhatsApp
+          </button>
+          <p class="text-[10px] text-center text-neutral-500">
+            Línea oficial de despachos: <strong>313 885 2832</strong>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 11. WISHLIST DRAWER -->
+  <div id="wishlist-drawer" class="hidden fixed inset-0 z-50 overflow-hidden">
+    <div class="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity" onclick="closeWishlist()"></div>
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="w-screen max-w-md bg-white border-l border-[#EAE6DE] shadow-2xl flex flex-col justify-between">
+        <div class="p-6 border-b border-[#EAE6DE] flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="text-xl">❤️</span>
+            <h3 class="font-serif-title text-xl font-bold text-neutral-900">Fragancias Deseadas</h3>
+          </div>
+          <button onclick="closeWishlist()" class="text-neutral-400 hover:text-neutral-700 p-1">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-6">
+          <div id="wishlist-items-container" class="space-y-2"></div>
+          <div id="wishlist-empty-message" class="text-center py-16">
+            <p class="font-serif-title text-lg font-bold text-neutral-800">Aún no tienes perfumes guardados</p>
+            <p class="text-xs text-neutral-500 mt-1">Presiona el corazón en cualquier perfume para armar tu lista de deseos.</p>
+          </div>
+        </div>
+        <div class="p-6 bg-[#FAF9F6] border-t border-[#EAE6DE]">
+          <button onclick="closeWishlist()" class="w-full py-3 bg-[#1A1A1A] text-white text-xs font-bold uppercase rounded-xl">
+            Explorar Catálogo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12. MOBILE FILTERS DRAWER -->
+  <div id="mobile-filters-drawer" class="hidden fixed inset-0 z-50 overflow-hidden">
+    <div class="fixed inset-0 bg-black/60 backdrop-blur-xs transition-opacity" onclick="closeMobileFilters()"></div>
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="w-screen max-w-sm bg-white border-l border-[#EAE6DE] shadow-2xl flex flex-col justify-between">
+        <div class="p-5 border-b border-[#EAE6DE] flex items-center justify-between">
+          <h3 class="font-serif-title text-lg font-bold text-neutral-900">Filtros de Colección</h3>
+          <button onclick="closeMobileFilters()" class="text-neutral-400 hover:text-neutral-700 p-1">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-5 space-y-5 text-xs">
+          <div>
+            <label class="block font-bold uppercase text-neutral-900 mb-2">Género</label>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="setFilter('gender', 'Todos'); closeMobileFilters();" class="py-2 px-3 border rounded-lg bg-neutral-900 text-white font-bold">Todos</button>
+              <button onclick="setFilter('gender', 'Unisex'); closeMobileFilters();" class="py-2 px-3 border rounded-lg bg-white font-bold">Unisex</button>
+              <button onclick="setFilter('gender', 'Masculino'); closeMobileFilters();" class="py-2 px-3 border rounded-lg bg-white font-bold">Caballero</button>
+              <button onclick="setFilter('gender', 'Femenino'); closeMobileFilters();" class="py-2 px-3 border rounded-lg bg-white font-bold">Dama</button>
+            </div>
+          </div>
+          <div>
+            <label class="block font-bold uppercase text-neutral-900 mb-2">Familia Olfativa</label>
+            <div class="space-y-1.5">
+              <button onclick="setFilter('family', 'Todas'); closeMobileFilters();" class="w-full text-left py-2 px-3 rounded-lg hover:bg-neutral-100 font-semibold">✨ Todas</button>
+              <button onclick="setFilter('family', 'Oriental/Especiada'); closeMobileFilters();" class="w-full text-left py-2 px-3 rounded-lg hover:bg-neutral-100 font-semibold">🪵 Oriental / Especiada</button>
+              <button onclick="setFilter('family', 'Gourmand'); closeMobileFilters();" class="w-full text-left py-2 px-3 rounded-lg hover:bg-neutral-100 font-semibold">🍫 Gourmand</button>
+              <button onclick="setFilter('family', 'Amaderada'); closeMobileFilters();" class="w-full text-left py-2 px-3 rounded-lg hover:bg-neutral-100 font-semibold">🌲 Amaderada</button>
+              <button onclick="setFilter('family', 'Floral'); closeMobileFilters();" class="w-full text-left py-2 px-3 rounded-lg hover:bg-neutral-100 font-semibold">🌸 Floral</button>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 bg-[#FAF9F6] border-t border-[#EAE6DE] flex gap-2">
+          <button onclick="resetFilters(); closeMobileFilters();" class="flex-1 py-3 bg-white border border-[#DDD8CB] rounded-xl text-xs font-bold text-neutral-700">Limpiar</button>
+          <button onclick="closeMobileFilters()" class="flex-1 py-3 bg-[#1A1A1A] text-white rounded-xl text-xs font-bold uppercase">Aplicar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 13. FLOATING WHATSAPP BUTTON (ALWAYS ACCESSIBLE) -->
+  <a 
+    href="https://wa.me/573138852832?text=Hola%20ASTRA%20Perfumer%C3%ADa%20%E2%9C%A8%20Me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20sobre%20su%20cat%C3%A1logo." 
+    target="_blank"
+    class="fixed bottom-20 sm:bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform whatsapp-pulse"
+    title="Chatear con ASTRA por WhatsApp - 313 885 2832"
+  >
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.578 1.764.88 2.791.88 3.182 0 5.768-2.587 5.768-5.766.001-3.187-2.575-5.766-5.768-5.766zm9.969 5.766c0 5.405-4.394 9.8-9.8 9.8-1.734 0-3.355-.453-4.771-1.246l-5.429 1.422 1.447-5.295c-.879-1.477-1.378-3.186-1.378-4.981 0-5.406 4.394-9.8 9.8-9.8 5.405 0 9.8 4.394 9.8 9.8z"/>
+    </svg>
+  </a>
+
+  <!-- 14. MOBILE BOTTOM APP NAVIGATION BAR -->
+  <nav class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-[#EAE6DE] px-4 py-2 flex items-center justify-around text-[10px] font-bold text-neutral-600">
+    <a href="#catalogo" class="flex flex-col items-center gap-0.5 hover:text-[#C5A059]">
+      <span class="text-base">🏠</span>
+      <span>Catálogo</span>
+    </a>
+    <button onclick="openMobileFilters()" class="flex flex-col items-center gap-0.5 hover:text-[#C5A059]">
+      <span class="text-base">⚙️</span>
+      <span>Filtros</span>
+    </button>
+    <button onclick="document.getElementById('search-input-mobile')?.focus()" class="flex flex-col items-center gap-0.5 hover:text-[#C5A059]">
+      <span class="text-base">🔍</span>
+      <span>Buscar</span>
+    </button>
+    <button onclick="openWishlist()" class="flex flex-col items-center gap-0.5 hover:text-[#C5A059] relative">
+      <span class="text-base">❤️</span>
+      <span>Favoritos</span>
+      <span class="wishlist-count-badge hidden absolute -top-1 -right-1 w-3.5 h-3.5 bg-[#C5A059] text-white text-[8px] font-extrabold rounded-full flex items-center justify-center">0</span>
+    </button>
+    <button onclick="openCart()" class="flex flex-col items-center gap-0.5 hover:text-[#C5A059] relative">
+      <span class="text-base">🛍️</span>
+      <span>Bolsa</span>
+      <span class="cart-count-badge hidden absolute -top-1 -right-1 w-3.5 h-3.5 bg-[#25D366] text-white text-[8px] font-extrabold rounded-full flex items-center justify-center">0</span>
+    </button>
+  </nav>
+
+  <!-- 15. EDITORIAL FOOTER -->
+  <footer class="bg-[#141414] text-white pt-16 pb-24 lg:pb-14 border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-neutral-800">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4">
+          <span class="font-serif-title text-2xl font-bold tracking-widest text-[#DFBF7A]">ASTRA</span>
+          <p class="text-xs text-neutral-400 font-light leading-relaxed">
+            Boutique especializada en alta perfumería nicho, árabe y diseñador. Decants originales en vidrio y frascos sellados para toda Colombia.
+          </p>
+          <div class="text-xs">
+            <span class="text-neutral-400 block">Línea Oficial de Pedidos:</span>
+            <a href="https://wa.me/573138852832" target="_blank" class="text-[#25D366] font-bold text-sm hover:underline">
+              +57 313 885 2832
+            </a>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#DFBF7A] mb-4">Colecciones</h4>
+          <ul class="space-y-2 text-xs text-neutral-400">
+            <li><a href="#catalogo" onclick="setCategoryTab('arabe')" class="hover:text-white">Perfumería Árabe (Lattafa, Armaf)</a></li>
+            <li><a href="#catalogo" onclick="setCategoryTab('nicho')" class="hover:text-white">Nicho Exclusivo (MFK, Creed, Delina)</a></li>
+            <li><a href="#catalogo" onclick="setCategoryTab('decants')" class="hover:text-white">Decants de 5ml & 10ml</a></li>
+            <li><a href="#catalogo" onclick="setCategoryTab('dama')" class="hover:text-white">Perfumes para Dama</a></li>
+            <li><a href="#catalogo" onclick="setCategoryTab('caballero')" class="hover:text-white">Perfumes para Caballero</a></li>
+          </ul>
+        </div>
+
+        <!-- Guarantees -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#DFBF7A] mb-4">Garantías ASTRA</h4>
+          <ul class="space-y-2 text-xs text-neutral-400">
+            <li class="flex items-center gap-2"><span class="text-[#25D366]">✓</span> 100% Extractos y Perfumes Originales</li>
+            <li class="flex items-center gap-2"><span class="text-[#25D366]">✓</span> Atomizadores de vidrio con sellado hermético</li>
+            <li class="flex items-center gap-2"><span class="text-[#25D366]">✓</span> Envíos asegurados por Servientrega e Interrapidísimo</li>
+            <li class="flex items-center gap-2"><span class="text-[#25D366]">✓</span> Pago contraentrega en ciudades principales</li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-[#DFBF7A] mb-4">Atención Inmediata</h4>
+          <p class="text-xs text-neutral-400 leading-relaxed mb-4">
+            ¿Buscas una fragancia en especial o necesitas recomendación según la ocasión?
+          </p>
+          <a 
+            href="https://wa.me/573138852832" 
+            target="_blank"
+            class="inline-flex items-center gap-2 px-5 py-3 bg-[#25D366] text-white rounded-xl text-xs font-bold uppercase hover:bg-[#1EBE5D] transition-all"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.969.578 1.764.88 2.791.88 3.182 0 5.768-2.587 5.768-5.766.001-3.187-2.575-5.766-5.768-5.766zm9.969 5.766c0 5.405-4.394 9.8-9.8 9.8-1.734 0-3.355-.453-4.771-1.246l-5.429 1.422 1.447-5.295c-.879-1.477-1.378-3.186-1.378-4.981 0-5.406 4.394-9.8 9.8-9.8 5.405 0 9.8 4.394 9.8 9.8z"/></svg>
+            Escribir al 313 885 2832
+          </a>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-neutral-500 gap-4">
+        <p>© 2026 ASTRA PERFUMERIA. Todos los derechos reservados. Colombia.</p>
+        <p class="text-neutral-400">Precios en Pesos Colombianos (COP) • Alta Perfumería & Decants</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Main JavaScript App -->
+  <script src="js/app.js"></script>
+</body>
+</html>
