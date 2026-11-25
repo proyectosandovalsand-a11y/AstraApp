@@ -42,6 +42,65 @@ Catálogo interactivo de alta gama para **ASTRA PERFUMERIA**, inspirado en las m
 - Reseñas verificadas de compradores de Bogotá, Medellín y Cali.
 - Acordeón interactivo con respuestas sobre originalidad, decants, envíos y contraentrega.
 
+Estructura del proyecto
+
+```
+astra-perfumeria/
+├── index.html              # Página principal (vista)
+├── css/
+│   └── styles.css          # Estilos (paleta negro / marfil / dorado)
+├── js/
+│   ├── productos.js        # Capa de datos: catálogo de 15 fragancias
+│   ├── logica.js           # Capa de lógica de negocio (funciones puras)
+│   └── app.js              # Capa de presentación: DOM y eventos
+├── img/
+│   ├── logo.jpg            # Logo de Astra Perfumería
+│   └── productos/          # Imágenes de los 15 productos (SVG)
+├── tests/
+│   └── logica.test.js      # 24 pruebas unitarias
+├── docs/
+│   ├── ARQUITECTURA.md     # Detalle de la arquitectura
+│   ├── PRUEBAS.md          # Plan y casos de prueba
+│   └── capturas/           # Capturas de pantalla
+├── package.json            # Script "npm test"
+├── .gitignore
+├── LICENSE
+└── README.md
+```
+
+Arquitectura
+
+El proyecto usa una **arquitectura por capas** del lado del cliente, inspirada en el patrón **MVC** (Modelo – Vista – Controlador):
+
+```
+┌──────────────────────────────────────────────┐
+│  VISTA            index.html + styles.css     │  Lo que ve el usuario
+└──────────────────────┬───────────────────────┘
+                       │ eventos (clic, submit)
+┌──────────────────────▼───────────────────────┐
+│  CONTROLADOR      js/app.js                   │  Maneja el DOM, el estado
+│  (presentación)                                │  y el flujo de compra
+└──────────────────────┬───────────────────────┘
+                       │ llama funciones puras
+┌──────────────────────▼───────────────────────┐
+│  LÓGICA DE NEGOCIO  js/logica.js              │  Carrito, totales, filtros,
+│                                                │  validaciones, n.º de pedido
+└──────────────────────┬───────────────────────┘
+                       │ lee
+┌──────────────────────▼───────────────────────┐
+│  DATOS (MODELO)   js/productos.js             │  Catálogo de productos
+│                   localStorage                │  Persistencia del carrito
+└──────────────────────────────────────────────┘
+```
+
+**Decisiones principales:**
+
+- **Separación de responsabilidades:** `logica.js` no toca el DOM; solo recibe datos y devuelve resultados. Por eso se puede probar en Node.
+- **Funciones puras e inmutabilidad:** las funciones del carrito devuelven un arreglo nuevo en lugar de modificar el original, lo que evita errores y facilita las pruebas.
+- **Módulos compatibles con navegador y Node:** `productos.js` y `logica.js` se exponen como `window.*` en el navegador y como `module.exports` en Node.
+- **Sin backend:** el pago y el envío de correo son simulados. El diseño permite reemplazar la simulación por una API real sin cambiar la lógica.
+
+
 ---
 
 ## 🚀 ¿Cómo Abrir la Aplicación?
